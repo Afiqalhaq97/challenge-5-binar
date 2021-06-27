@@ -15,6 +15,8 @@ app.use(express.urlencoded({ extended: false}));
 
 //middleware
 const router = require('./routing/router')
+const users = require("./data/user.json")
+
 app.use(router);
 
 //routing
@@ -32,10 +34,22 @@ app.use(function(err,req,res,next){
     }) 
 })
 
+//api 
+//read all data 
+app.get('/api/v1/user', (req,res) => {
+    res.status(200).json(users)
+})
+
+//api get data by id
+app.get('/api/v1/user/:id', (req,res) => {
+    const user = users.find(i => i.id == req.params.id)
+    res.status(200).json(user)
+})
+
 // 404 handler
 app.use(function(req,res){
     res.status(404);
-    res.render('404'); //use for render file: 'view/index.ejs'
+    res.render('404'); 
 })
 
 //create server start 

@@ -1,10 +1,17 @@
 const express = require('express')
-const router = express.Router()
-
+const router = express()
 
 router.get("/login", (req,res) => {
     res.render("login");
     //next(); // -> jika tidak dilakukan fungsi next maka akan berhenti disini. 
+});
+
+router.post("/login", (req,res) => {
+    res.redirect('/games')
+});
+
+router.get("/games", (req,res) => {
+    res.render("games");
 });
 
 router.get("/about", (req,res, next) => {

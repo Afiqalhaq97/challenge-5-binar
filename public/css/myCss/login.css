@@ -25,12 +25,11 @@ h1 {
         height: 100vh;
     }
     img {
-        padding: 5px;
+        padding-top: 10vh;
         width: 500px;
     }
 
 }
-
 
 @media screen and (max-width: 727px) {
     .login-imageBackground{
