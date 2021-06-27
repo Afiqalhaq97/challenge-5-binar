@@ -1,0 +1,49 @@
+h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: black;
+}
+
+.login-form{
+    display: inline;
+    justify-content: center;
+    text-align: center;
+    padding-top: 25vh;
+}
+
+@media screen and (min-width: 727px) {
+    .login-imageBackground{
+        background-color: #733572;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 100vh;
+    }
+    img {
+        padding: 5px;
+        width: 500px;
+    }
+
+}
+
+
+@media screen and (max-width: 727px) {
+    .login-imageBackground{
+        background-color: #733572;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+        height: 8vh;
+    }
+    img {
+        padding: 5px;
+        width: 75px;
+        justify-content: center;
+    }
+}

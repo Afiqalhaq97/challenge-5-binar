@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
-router.use(function timelog (req,res,next){
-    console.log('Time', Date.now())
-    next()
-})
+
+router.get("/login", (req,res) => {
+    res.render("login");
+    //next(); // -> jika tidak dilakukan fungsi next maka akan berhenti disini. 
+});
 
 router.get("/about", (req,res, next) => {
     res.send("About");

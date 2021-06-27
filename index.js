@@ -39,6 +39,6 @@ app.use(function(req,res){
 })
 
 //create server start 
-app.listen(port, () => {
-    console.log(`server tun on = http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`server run on = http://localhost:${port}`);
 });
