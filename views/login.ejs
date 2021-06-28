@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Binar Challange</title>
   <meta charset="utf-8">
@@ -8,35 +9,38 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+
   <link rel="stylesheet" type="text/css" href="css/myCss/login.css">
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑</text></svg>">
 
 </head>
 
 <body>
   <div class="row">
     <div class="col-sm-7 col-xs-12 login-imageBackground">
-      <center><img src = "img/binar.png"></center>
+      <center><img src="img/binar.png"></center>
     </div>
-    <div class="col-sm-5 col-xs-12 login-form">
-      <div class="col-sm-12 col-xs-12">
-        <h1>LOGIN</h1>
+    <div class="col-sm-5 col-xs-12 login-form-container">
+      <div class="col-sm-12 col-xs-12 h1-login">
+        LOGIN
       </div>
       <form action="/login" method="POST">
         <div class="col-sm-12 col-xs-12" style="padding-top: 20px;">
-          <input type="email" name="email" placeholder="Enter email"> </label>  
+          <input class="login-form" type="email" name="email" placeholder="Enter email"> </label>
         </div>
         <div class="col-sm-12 col-xs-12" style="padding-top: 20px;">
-          <input type="password" name="password" placeholder="Enter Password">
+          <input class="login-form" type="password" name="password" placeholder="Enter Password">
         </div>
         <br>
-        <button type="submit">LOGIN</button>
+        <button class="login-button" type="submit">LOGIN</button>
       </form>
+      <br>
+      <a href="/register"> <button class="register-button" type="submit">REGISTER</button> </a>
 
     </div>
   </div>
 </body>
+
 </html>
-  
