@@ -94,7 +94,7 @@ app.post("/login", (req, res) => {
     const { email, password }  = req.body
     for (var i = 0; i < users.length; i++){
         if(email == users[i].email && password == users[i].password){
-            res.redirect(`/games?name=${users[i].usernameY}`) // if user and password match than redirect into games area 
+            res.redirect(`/games?name=${users[i].username}`) // if user and password match than redirect into games area 
         }
     }
     // if not found then please study about alert! render
