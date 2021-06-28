@@ -65,6 +65,18 @@ app.get('api/v1/user/post', (req, res) => {
     res.status(201).json(userNew)
 })
 
+//login validation
+app.post("/login", (req, res) => {
+    const email = req.body.email
+    const password = req.body.password
+    if(email == "tiko.pb@gmail.com" && password==1234){
+        res.redirect('/games')  
+    }else {
+        res.render('login')
+    }
+    //res.redirect('/games')
+});
+
 // 404 handler
 app.use(function (req, res) {
     res.status(404);
@@ -72,6 +84,6 @@ app.use(function (req, res) {
 })
 
 //create server start 
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, () => {
     console.log(`server run on = http://localhost:${port}`);
 });

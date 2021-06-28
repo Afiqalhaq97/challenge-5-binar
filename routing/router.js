@@ -1,17 +1,16 @@
 const express = require('express')
 const router = express()
+let alert = require('alert');  
 
 router.get("/login", (req, res) => {
     res.render("login");
     //next(); // -> jika tidak dilakukan fungsi next maka akan berhenti disini. 
 });
 
-router.post("/login", (req, res) => {
-    res.redirect('/games')
-});
-
 router.get("/register", (req, res) => {
     res.render("register");
+    //alert("WRONG USERNAME AND PASSWORD")
+    //res.send("alert("your alert message"); window.location.href = "/page_location";");
     //next(); // -> jika tidak dilakukan fungsi next maka akan berhenti disini. 
 });
 
