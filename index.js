@@ -16,7 +16,7 @@ app.use(express.json());
 
 //middleware
 const router = require('./routing/router')
-const users = require("./data/user.json")
+var users = require("./data/user.json")
 
 app.use(router);
 
@@ -52,7 +52,7 @@ app.get('/api/v1/user/:id', (req, res) => {
 })
 
 //post data
-app.get('api/v1/user/post', (req, res) => {
+app.get('/api/v1/user/post', (req, res) => {
     const { username, password, fullname, email } = req.body
     //Get last of ID
     const id = users[users.length - 1].id + 1
@@ -67,15 +67,32 @@ app.get('api/v1/user/post', (req, res) => {
 
 //login validation
 app.post("/login", (req, res) => {
-    const email = req.body.email
-    const password = req.body.password
-    if(email == "tiko.pb@gmail.com" && password==1234){
-        res.redirect('/games')  
-    }else {
-        res.render('login')
+    const { email, password }  = req.body
+    for (var i = 0; i < users.length; i++){
+        if(email == users[i].email && password == users[i].password){
+            res.redirect(`/games?name=${users[i].username}`) // if user and password match than redirect into games area 
+        }
     }
-    //res.redirect('/games')
+    // if not found then please study about alert! render
+    res.render('login')
 });
+
+//register post
+//app post (Create new data)
+app.post('/register', (req,res) => {
+    const {username, fullname, email, password} = req.body
+    //get id 
+    const id = users[users.length -1].id + 1
+    const register = {
+        id, username, password, fullname, email
+    }
+    users.push(register)
+    console.log(users)
+    
+    users = JSON.stringify(users); // use for parsing into json file 
+    fs.writeFileSync("./data/user.json", users, "utf8"); // use for saving the json file.
+    res.render('login')
+})
 
 // 404 handler
 app.use(function (req, res) {

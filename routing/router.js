@@ -16,7 +16,10 @@ router.get("/register", (req, res) => {
 
 
 router.get("/games", (req, res) => {
-    res.render("games");
+    const name = req.query.name || 'PLAYER 1'
+    res.render('games', {
+        name
+    })
 });
 
 router.get("/about", (req, res, next) => {
