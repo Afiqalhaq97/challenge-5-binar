@@ -1,3 +1,1 @@
-[
-    {"id":1,"username":"tiko","password":1234,"fullname":"tiko tiko","email":"tiko.pb@gmail.com"}
-]
+[{"id":1,"username":"tiko","password":1234,"fullname":"tiko tiko","email":"tiko.pb@gmail.com"},{"id":2,"username":"tiko api test","password":1234,"fullname":"tiko tiko","email":"tiko.pbb@gmail.com"},{"id":3,"username":"tiko api test 2","password":1234,"fullname":"tiko tiko","email":"tiko.2pbb@gmail.com"}]
