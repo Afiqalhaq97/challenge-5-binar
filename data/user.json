@@ -1,1 +1,43 @@
-[{"id":1,"username":"tiko","password":1234,"fullname":"tiko tiko","email":"tiko.pb@gmail.com"},{"id":2,"username":"tiko api test","password":1234,"fullname":"tiko tiko","email":"tiko.pbb@gmail.com"},{"id":3,"username":"tiko api test 2","password":1234,"fullname":"tiko tiko","email":"tiko.2pbb@gmail.com"},{"id":4,"username":"putra","password":"1234","fullname":"putra b","email":"putra@gmail.com"},{"id":5,"username":"putra","password":1234,"fullname":"tiko tiko","email":"putra@gmail.com"},{"id":6,"username":"putraB","password":1234,"fullname":"tiko tiko","email":"putraB@gmail.com"}]
+[{
+    "id": 1,
+    "username": "andi",
+    "password": 1234,
+    "fullname": "andi jaya",
+    "email": "andi.jaya@gmail.com"
+}, {
+    "id": 2,
+    "username": "budi",
+    "password": 1234,
+    "fullname": "budi daya",
+    "email": "budi.daya@gmail.com"
+}, {
+    "id": 3,
+    "username": "rahmat",
+    "password": 1234,
+    "fullname": "rahmat putra",
+    "email": "rahmat.putra@gmail.com"
+}, {
+    "id": 4,
+    "username": "joko",
+    "password": "1234",
+    "fullname": "joko budiman",
+    "email": "joko@gmail.com"
+}, {
+    "id": 5,
+    "username": "putri",
+    "password": 1234,
+    "fullname": "putri indah",
+    "email": "putri@gmail.com"
+}, {
+    "id": 6,
+    "username": "santi",
+    "password": 1234,
+    "fullname": "santi lestari",
+    "email": "santi@gmail.com"
+}, {
+    "id": 7,
+    "username": "afiq",
+    "password": "al1slam1",
+    "fullname": "afiq miftahurrizqi alhaq",
+    "email": "afiqalhaq97@gmail.com"
+}]
